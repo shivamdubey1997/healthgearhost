@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-mn5r1kzv7*746727(e43z!35ym7dsr1jw4t$zo&gtyd@aauiha
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -119,11 +119,21 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-DATA_UPLOAD_MAX_MEMORY_SIZE = 209,715,200  
+
 
 STATIC_URL = 'static/'
+#PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+#STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static")
+]
+
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880 # 5 MB
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
