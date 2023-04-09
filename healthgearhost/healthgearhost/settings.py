@@ -121,7 +121,7 @@ MEDIA_URL = '/media/'
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880 # 5 MB
+DATA_UPLOAD_MAX_MEMORY_SIZE = 209,715,200  
 
 STATIC_URL = 'static/'
 
